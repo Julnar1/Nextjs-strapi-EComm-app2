@@ -61,7 +61,9 @@ const Cart = () => {
               </ul>
             </div>
             <div className="col-md-3 mb-3">
-              <OrderDetails subTotal={subTotal} total={total} />
+            {subTotal !== undefined && total !== undefined && (
+  <OrderDetails subTotal={subTotal} total={total} />
+)}
             </div>
             <div className="col-md-4">
               <Payment onCheckout={handleCheckout} />

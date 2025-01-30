@@ -3,9 +3,10 @@ import classNames from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Cart.module.css";
-import PropTypes from "prop-types";
 
-const OrderDetails = ({ subTotal, total }:{subTotal:number; total:number}) => {
+const OrderDetails = ({ subTotal = 0.00, // Set default value with two decimal places
+  total = 0,
+}: { subTotal?: number; total?: number }) => {
 
   return (
     <div className="card">
